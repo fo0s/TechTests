@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'receiver'
 
 def start_parser
@@ -19,4 +21,3 @@ end
 def return_uniq_views
   @parse.uniq_views
 end
-
