@@ -1,4 +1,4 @@
-# Smart Pesion
+# Smart Pension
 
 I was contacted by a recruiter for the postion of Junior Ruby on Rails Developer
 for a company called `Smart Pension` which I turned down.
