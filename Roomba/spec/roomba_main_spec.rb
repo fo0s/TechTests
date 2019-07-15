@@ -12,7 +12,7 @@ describe 'Roomba main' do
     end
 
     it 'can be given a room' do
-      @zoom.input_room(@basic_test_room)
+      @zoom.room = @basic_test_room
       expect(@zoom.room).to eq ['r', 'o', 'o', 'm']
     end
   end

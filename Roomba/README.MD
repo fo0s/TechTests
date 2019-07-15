@@ -4,7 +4,7 @@
 
 ## Functionality
 
-**Room Builder**
+### Room Builder
 
 `RoomBuilder` class creates a room based in specific input
 
@@ -16,21 +16,21 @@
 
 | Output | Legend |
 | :---: | :---: |
-|`xxxxxxx`<br/>`x*****x`<br/>`x*OO**x`<br/>`x*****x`<br/>`xxxxxxx` | x = wall<br/>* = dust<br/>O = Obstruction |  
+| `xxxxxxx`<br/>`xD****x`<br/>`x*OO**x`<br/>`x*****x`<br/>`xxxxxxx` | x = wall<br/>* = dust<br/>O = Obstruction<br/>D = Docking station |  
 
 When the roomba simulation runs, the asterisk (*) character will be replaced with a blank ( ) character to emulated that spot has been cleaned.
 
-**TODO** Need to figure out how to impliment starting position
+**TODO** Have option to randomly place docking station
 
-### To use
+## To use
 
 Instructions
 
-### Testing
+## Testing
 
 Testing procedures
 
-### Contributions
+## Contributions
 
 Donations in forms of coffee is always appreciated. :smirk:
 Otherwise to contribute to the code, fork the repo, create a branch and make a pull request.

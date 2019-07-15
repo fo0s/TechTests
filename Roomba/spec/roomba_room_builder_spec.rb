@@ -1,7 +1,7 @@
 require 'roomba_room_builder'
 
 describe 'Room builder' do
-  before(:each) do
+  before(:all) do
     @room = RoomBuilder.new
     @room.build_room(5, 5, 0)
   end
@@ -29,10 +29,15 @@ describe 'Room builder' do
       expect(@room.output.count).to eq 7
     end
 
+    it 'roomba has a docking station' do
+      expect(@room.output[1]).to include 'D'
+    end
+
     it 'randomly places obstructions in the room' do
       @room.build_room(5, 5, 2)
       expect(@room.obstructions_used).to eq true
     end
+
   end
 
   # Expect build_room(5, 5) function to create a room;
