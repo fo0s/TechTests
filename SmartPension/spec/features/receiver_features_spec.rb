@@ -1,15 +1,18 @@
-# frozen_string_literal: true
+# require 'features_helper'
 
-require 'features_helper'
+# feature 'File Parcer-- ' do
+#   before :each do 
+#     @file = fixture_file('./../webserver.log', 'log')
+#   end
+#   scenario "Program can load a file and return a result" do
 
-feature 'File Parcer-- ' do
-  scenario 'Program can load a file and return a result' do
-    start_parser
+#     start_parser
 
-    load_file('../webserver.log')
+#     load_file(@file)
 
-    expect(read_content).to_not be empty
-    expect(return_most_views).to end_with ''
-    expect(return_uniq_views).to end_with ''
-  end
-end
+#     expect(read_content).to_not be []
+#     expect(return_most_views).to end_with '/about 3 visits'
+#     expect(return_uniq_views).to end_with '/about/2 3 unique views'
+
+#   end
+# end
