@@ -7,7 +7,7 @@ class RoomBuilder
     @obstructions_used = false
   end
 
-  def build_room(x, y, obstructions)
+  def build_room(x, y, o = 0)
     # Room will be 'x' long, +2 to factor in the walls
     outer_wall = Array.new((x + 2), 'x')
     obstructions_left = obstructions

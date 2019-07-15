@@ -43,5 +43,7 @@ describe 'Room builder' do
   # ['x', '*', '*', '*', '*', '*', 'x']
   # ['x', '*', '*', '*', '*', '*', 'x']
   # ['x', 'x', 'x', 'x', 'x', 'x', 'x']
+  #
+  # Added obstruction argument randomly places obsticles in the room
 
 end
