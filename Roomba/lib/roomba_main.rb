@@ -1,8 +1,12 @@
 # Start of main roomba class
-class roomba
-  attr_reader :input
+class Roomba
+  attr_reader :room
 
-  def def initialize
-    @input = []
+  def initialize
+    @room = []
+  end
+
+  def input_room(room)
+    @room = room
   end
 end

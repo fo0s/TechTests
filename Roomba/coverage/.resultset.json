@@ -1,0 +1,42 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/random/Dropbox/Code/Projects/TechTests/Roomba/spec/roomba_main_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/random/Dropbox/Code/Projects/TechTests/Roomba/lib/roomba_main.rb": [
+        null,
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1563179834
+  }
+}
