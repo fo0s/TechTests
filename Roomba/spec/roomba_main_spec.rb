@@ -16,4 +16,5 @@ describe 'Roomba main' do
       expect(@zoom.room).to eq ['r', 'o', 'o', 'm']
     end
   end
+
 end
