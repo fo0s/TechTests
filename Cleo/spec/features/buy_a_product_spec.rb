@@ -3,10 +3,12 @@
 # return the correct product
 
 feature "A working vending machine" do
-  xscenario "User can buy a product" do
+  scenario "User can buy a product" do
     start_program
 
     insert_amount(1.5)
-    expect(select_item('Water')).to eq 'Water'
+    select_item('Water')
+
+    expect(success).to eq 'You receive a Water'
   end
 end
