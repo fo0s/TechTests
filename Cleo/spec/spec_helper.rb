@@ -1,9 +1,16 @@
+require 'capybara'
+require 'capybara/rspec'
 require 'coveralls'
 require 'simplecov'
 require 'simplecov-console'
 require 'rspec'
 
-system 'clear' # Clear the terminal to keep things clean
+# Helper files
+require_relative 'features_helper.rb'
+require_relative '../lib/vending_machine.rb'
+
+# Clear the terminal to keep things clean
+system 'clear'
 
 Coveralls.wear!
 
