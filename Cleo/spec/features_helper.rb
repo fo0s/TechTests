@@ -11,16 +11,9 @@ def select_item(item)
   @vending_machine.check_item(item)
 end
 
-def success
-  "You receive a #{@vending_machine.output}" if !_is_output?
+def read_output
+  "You receive a #{@vending_machine.output}"
 end
 
-def failure
-  
-end
-
-def _is_output?
-  @vending_machine.output.empty?
-end
 
 

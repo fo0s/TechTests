@@ -1,7 +1,6 @@
 require 'json'
 
 # Start of the main vending machine class
-
 class VendingMachine
   attr_accessor :data_source, :temp_amount
   attr_reader :output
@@ -17,8 +16,11 @@ class VendingMachine
   end
 
   def check_item(item)
-    _exists?(item) ? item_details = parse_json[item]: raise(:no_item)
-    @output = item if _enough_money?(item_details.first)
+    if _exists?(item) and _enough_money?(parse_json[item].first)
+      @output = item
+    else
+      @output = 'Error!'
+    end
   end
 
 
