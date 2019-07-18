@@ -34,13 +34,19 @@ describe 'Vending machine' do
     it 'can check it against a items price' do
       @vending_test.temp_amount += @test_product.last
       @vending_test.check_item(@test_product.first)
-      expect(@vending_test.output).to eq 'Water'
+      expect(@vending_test.output).to eq 'You receive a Water'
     end
 
     it 'can ask for the right amount of money' do
       @vending_test.temp_amount += 1
       @vending_test.check_item(@test_product.first)
       expect(@vending_test.output).to eq 'Error: you need 1 more to get a Water'
+    end
+
+    it 'can give a item and change if payed too much' do
+      @vending_test.temp_amount += 5
+      @vending_test.check_item(@test_product.first)
+      expect(@vending_test.output).to eq 'You receive a Water and 3 in change'
     end
   end
 end

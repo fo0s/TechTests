@@ -12,7 +12,7 @@ def select_item(item)
 end
 
 def read_output
-  @vending_machine.output.split(' ').first != 'Error:' ? "You receive a #{@vending_machine.output}" : @vending_machine.output
+  @vending_machine.output
 end
 
 def check_if_enough; end

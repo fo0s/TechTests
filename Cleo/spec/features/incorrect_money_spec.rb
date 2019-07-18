@@ -15,4 +15,14 @@ feature 'Can handle incorrect amounts of money:' do
 
     expect(read_output).to eq 'Error: you need 1 more to get a Water'
   end
+
+  scenario 'User is given change if too much is given' do
+    start_program
+
+    insert_amount(5)
+    select_item('Water')
+    check_if_enough
+
+    expect(read_output).to eq 'You receive a Water and 3 in change'
+  end
 end

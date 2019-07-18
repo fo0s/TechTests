@@ -22,7 +22,7 @@ feature 'A working vending machine:' do
 
     insert_amount(2)
     select_item('Redbull')
-    
+
     expect(read_output).to eq 'Error: Item not stocked!'
   end
 
@@ -31,7 +31,7 @@ feature 'A working vending machine:' do
 
     insert_amount(1)
     select_item('Water')
-    
+
     expect(read_output).to eq 'Error: you need 1 more to get a Water'
   end
 end
