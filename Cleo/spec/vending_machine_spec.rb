@@ -43,10 +43,16 @@ describe 'Vending machine' do
       expect(@vending_test.output).to eq 'Error: you need 1 more to get a Water'
     end
 
-    it 'can give a item and change if payed too much' do
+    it 'can give an item and change if payed too much' do
       @vending_test.temp_amount += 5
       @vending_test.check_item(@test_product.first)
       expect(@vending_test.output).to eq 'You receive a Water and 3 in change'
+    end
+
+    it 'returns money regardless if right or wrong amount if wrong item selected' do
+      @vending_test.temp_amount += 5
+      @vending_test.check_item('Coffee')
+      expect(@vending_test.output).to eq 'Error: Coffee not stocked! Returning money'
     end
   end
 end

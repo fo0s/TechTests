@@ -25,4 +25,14 @@ feature 'Can handle incorrect amounts of money:' do
 
     expect(read_output).to eq 'You receive a Water and 3 in change'
   end
+
+  scenario 'User gets money back if wrong selection' do
+    start_program
+
+    insert_amount(5)
+    select_item('Coffee')
+    check_if_enough
+
+    expect(read_output).to eq 'Error: Coffee not stocked! Returning money'
+  end
 end

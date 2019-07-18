@@ -12,7 +12,7 @@ class VendingMachine
   end
 
   def check_item(item)
-    _exists?(item) ? calculate_correct_amount(item) : @output = 'Error: Item not stocked!'
+    _exists?(item) ? calculate_correct_amount(item) : create_output(2, 0, item)
   end
 
   def calculate_correct_amount(item)
@@ -21,15 +21,18 @@ class VendingMachine
   end
 
   def create_output(cond, item_price, item)
-    if cond != :not_enough
+    if cond == 1 or cond == 0
       @output = "You receive a #{item}"
-      @output += " and #{temp_amount - item_price} in change" if cond == :too_much
+      @output += " and #{temp_amount - item_price} in change" if cond == 1
+      @temp_amount = 0
+
+    elsif cond == 2
+      @output = "Error: #{item} not stocked! Returning money"
       @temp_amount = 0
     else
       @output = "Error: you need #{item_price - @temp_amount} more to get a #{item}"
     end
   end
-
 
   def _exists?(item)
     parse_json.key?(item)
@@ -42,13 +45,6 @@ class VendingMachine
   end
 
   def _enough_money?(amount)
-    case
-    when amount > @temp_amount
-      :not_enough
-    when amount < @temp_amount
-      :too_much
-    else
-      :just_right # ;p
-    end
+    @temp_amount <=> amount
   end
 end

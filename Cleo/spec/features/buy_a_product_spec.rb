@@ -21,9 +21,9 @@ feature 'A working vending machine:' do
     start_program
 
     insert_amount(2)
-    select_item('Redbull')
+    select_item('Coffee')
 
-    expect(read_output).to eq 'Error: Item not stocked!'
+    expect(read_output).to eq 'Error: Coffee not stocked! Returning money'
   end
 
   scenario 'User cannot buy somthing if not the right amount of money' do
