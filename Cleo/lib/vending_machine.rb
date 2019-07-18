@@ -6,23 +6,37 @@ class VendingMachine
   attr_reader :output
 
   def initialize
-    @data_source = ""
-    @output = ""
+    @data_source = ''
+    @output = ''
     @temp_amount = 0
+  end
+
+  def check_item(item)
+    _exists?(item) ? calculate_correct_amount(item) : create_output(2, 0, item)
+  end
+
+  def calculate_correct_amount(item)
+    item_price = parse_json[item].first
+    create_output(_enough_money?(item_price), item_price, item)
+  end
+
+  def create_output(cond, item_price, item)
+    if cond == 1 or cond == 0
+      @output = "You receive a #{item}"
+      @output += " and #{temp_amount - item_price} in change" if cond == 1
+      @temp_amount = 0
+
+    elsif cond == 2
+      @output = "Error: #{item} not stocked! Returning money"
+      @temp_amount = 0
+    else
+      @output = "Error: you need #{item_price - @temp_amount} more to get a #{item}"
+    end
   end
 
   def _exists?(item)
     parse_json.key?(item)
   end
-
-  def check_item(item)
-    if _exists?(item) and _enough_money?(parse_json[item].first)
-      @output = item
-    else
-      @output = 'Error!'
-    end
-  end
-
 
   :private
 
@@ -31,7 +45,6 @@ class VendingMachine
   end
 
   def _enough_money?(amount)
-    amount == @temp_amount
+    @temp_amount <=> amount
   end
-
 end
