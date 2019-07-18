@@ -6,8 +6,8 @@ gem 'coveralls', require: false
 gem 'json'
 
 group :test do
-  gem "capybara"
-  gem "capybara/rspec"
+  gem 'capybara'
+  gem 'capybara/rspec'
   gem 'rspec'
   gem 'rspec-core'
   gem 'rubocop'
