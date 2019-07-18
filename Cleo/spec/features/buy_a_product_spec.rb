@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Once an item is selected and the appropriate amount
 # of money is inserted, the vending machine should
 # return the correct product

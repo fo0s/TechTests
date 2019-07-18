@@ -3,12 +3,13 @@ require 'json'
 # Start of the main vending machine class
 class VendingMachine
   attr_accessor :data_source, :temp_amount
-  attr_reader :output
+  attr_reader :output, :need_topping_up
 
   def initialize
     @data_source = ''
     @output = ''
     @temp_amount = 0
+    @need_topping_up = []
   end
 
   def check_item(item)
@@ -37,6 +38,7 @@ class VendingMachine
   def _exists?(item)
     parse_json.key?(item)
   end
+
 
   :private
 
