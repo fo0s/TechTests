@@ -8,6 +8,8 @@ require 'rspec'
 # Helper files
 require_relative 'features_helper.rb'
 require_relative '../lib/vending_machine.rb'
+require_relative '../lib/maintance_person.rb'
+require_relative '../lib/currency.rb'
 
 # Clear the terminal to keep things clean
 system 'clear'

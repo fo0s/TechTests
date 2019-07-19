@@ -1,0 +1,62 @@
+{
+  "Products": [
+    "Water",
+    "Kit Kat",
+    "Gummi Bears",
+    "Skittles",
+    "Toblerone",
+    "Smarties",
+    "M&Ms",
+    "Snickers"
+  ],
+  "Quantities": [
+    {
+      "Water": [
+        2,
+        100
+      ]
+    },
+    {
+      "Kit Kat": [
+        1.25,
+        100
+      ]
+    },
+    {
+      "Gummi Bears": [
+        1,
+        100
+      ]
+    },
+    {
+      "Skittles": [
+        1.5,
+        100
+      ]
+    },
+    {
+      "Toblerone": [
+        1.7,
+        100
+      ]
+    },
+    {
+      "Smarties": [
+        1.2,
+        100
+      ]
+    },
+    {
+      "M&Ms": [
+        1,
+        100
+      ]
+    },
+    {
+      "Snickers": [
+        1.5,
+        100
+      ]
+    }
+  ]
+}

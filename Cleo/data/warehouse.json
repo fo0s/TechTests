@@ -1,0 +1,98 @@
+{
+  "Products": [
+    "Water",
+    "Kit Kat",
+    "Gummi Bears",
+    "Skittles",
+    "Toblerone",
+    "Smarties",
+    "M&Ms",
+    "Snickers"
+  ],
+  "Quantities": [
+    {
+      "Water": [
+        2,
+        70
+      ]
+    },
+    {
+      "Kit Kat": [
+        1.25,
+        70
+      ]
+    },
+    {
+      "Gummi Bears": [
+        1,
+        70
+      ]
+    },
+    {
+      "Skittles": [
+        1.5,
+        70
+      ]
+    },
+    {
+      "Toblerone": [
+        1.7,
+        70
+      ]
+    },
+    {
+      "Smarties": [
+        1.2,
+        70
+      ]
+    },
+    {
+      "M&Ms": [
+        1,
+        70
+      ]
+    },
+    {
+      "Snickers": [
+        1.5,
+        70
+      ]
+    }
+  ],
+  "Accepted money": [
+    "1p",
+    "2p",
+    "5p",
+    "10p",
+    "20p",
+    "50p",
+    "£1",
+    "£2"
+  ],
+  "Stored money": [
+    {
+      "1p": 100
+    },
+    {
+      "2p": 100
+    },
+    {
+      "5p": 100
+    },
+    {
+      "10p": 50
+    },
+    {
+      "20p": 50
+    },
+    {
+      "50p": 20
+    },
+    {
+      "£1": 20
+    },
+    {
+      "£2": 20
+    }
+  ]
+}
