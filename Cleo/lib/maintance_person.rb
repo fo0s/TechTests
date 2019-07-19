@@ -4,8 +4,8 @@ class MaintanancePerson
 
   def get_products(location)
     @warehouse_location = location
-    @products = parse_json['Products']
-    @warehouse_stock = parse_json['Quantities']
+    @products           = parse_json['Products']
+    @warehouse_stock    = parse_json['Quantities']
   end
 
   def stock_machine(machine)
@@ -39,7 +39,9 @@ class MaintanancePerson
       product[item] << temp
     end
 
-    new_warehouse = { "Products": @products, "Quantities": @warehouse_stock }
+    new_warehouse = { "Products": @products,
+                      "Quantities": @warehouse_stock }
+
     File.write(@warehouse_location, JSON.dump(new_warehouse))
   end
 

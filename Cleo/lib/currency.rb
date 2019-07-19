@@ -2,15 +2,19 @@ class ChangeConversion
   attr_reader :change
 
   def initialize
-    @numerical_values = { '£' => [2, 1], 'p' => [50, 20, 10, 5, 2, 1] }
-    @values = ['£', 'p']
-    @change = []
+    @numerical_values = {
+                          '£' => [2, 1],
+                          'p' => [50, 20, 10, 5, 2, 1]
+                        }
+    @values           = ['£', 'p']
+    @change           = []
   end
 
   def calculate(input)
     amount = input
 
     split_pound_pence = amount.tr('£', '').split('.') if amount.include?('£')
+    raise('Input was not correct. Please make sure it is similar to "£1.23"') if split_pound_pence.empty?
 
     @values.each do |currency|
       checked = split_pound_pence.shift.to_i
@@ -25,5 +29,7 @@ class ChangeConversion
         checked -= (denominator * remainder)
       end
     end
+
+    @change
   end
 end
