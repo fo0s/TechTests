@@ -14,7 +14,7 @@ class ChangeConversion
     amount = input
 
     split_pound_pence = amount.tr('£', '').split('.') if amount.include?('£')
-    raise('Input was not correct. Please make sure it is similar to "£1.23"') if split_pound_pence.empty?
+    raise('Input was not correct. Please make sure it is similar to "£1.23"') if split_pound_pence.nil?
 
     @values.each do |currency|
       checked = split_pound_pence.shift.to_i
