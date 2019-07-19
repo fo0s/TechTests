@@ -16,8 +16,14 @@ class VendingMachine
   end
 
   def check_item(item)
-    _exists?(item) ? calculate_correct_amount(item) : create_output(2, 0, item)
+    _exists?(item) ? calculate_correct_amount(item) : create_output(:no_stock, 0, item)
   end
+
+  def _exists?(item)
+    parse_json.key?(item)
+  end
+
+  :private
 
   def calculate_correct_amount(item)
     item_price = parse_json[item].first
@@ -25,25 +31,18 @@ class VendingMachine
   end
 
   def create_output(cond, item_price, item)
-    if cond == 1 or cond == 0
+    if (cond == 1) || (cond == 0)
       @output = "You receive a #{item}"
       @output += " and #{temp_amount - item_price} in change" if cond == 1
       @temp_amount = 0
 
-    elsif cond == 2
+    elsif cond == :no_stock
       @output = "Error: #{item} not stocked! Returning money"
       @temp_amount = 0
     else
       @output = "Error: you need #{item_price - @temp_amount} more to get a #{item}"
     end
   end
-
-  def _exists?(item)
-    parse_json.key?(item)
-  end
-
-
-  :private
 
   def parse_json
     JSON.parse(File.read(@data_source))

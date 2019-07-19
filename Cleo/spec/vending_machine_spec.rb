@@ -4,7 +4,6 @@ describe 'Vending machine' do
   before(:all) do
     @test_product = ['Water', 2] # London Prices
     @test_data = 'data/test/products_test.json'
-    
   end
 
   before(:each) do

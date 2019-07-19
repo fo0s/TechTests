@@ -1,13 +1,13 @@
 describe 'Maintanance person' do
   before(:all) do
-     @warehouse_location = 'data/test/test_warehouse.json'
-     @vending_machine = 'data/test/products_test.json'
-     @test_product = ['Water', 2]
+    @warehouse_location = 'data/test/test_warehouse.json'
+    @vending_machine = 'data/test/products_test.json'
+    @test_product = ['Water', 2]
   end
 
   before(:each) do
-     @alex = MaintanancePerson.new
-     @machine = VendingMachine.new(@vending_machine)
+    @alex = MaintanancePerson.new
+    @machine = VendingMachine.new(@vending_machine)
   end
 
   context '#stock--' do
@@ -30,7 +30,7 @@ describe 'Maintanance person' do
       expect(@machine.output).to eq 'You receive a Water'
     end
 
-        it 'can stock the vending machine with current stock' do
+    it 'can stock the vending machine with current stock' do
       @alex.get_products(@warehouse_location)
       @alex.stock_machine(@vending_machine)
 

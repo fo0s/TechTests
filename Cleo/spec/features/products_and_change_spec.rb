@@ -12,7 +12,7 @@ feature 'A maintenance person; ' do
     which_vending_machine
     stock_vending_machine
 
-    expect(machine_status).to eq "Fully stocked"
+    expect(machine_status).to eq 'Fully stocked'
   end
 
   scenario 'They should be able to fill a vending machine with small change' do
@@ -26,6 +26,6 @@ feature 'A maintenance person; ' do
 
     # add_change_to_machine
 
-    expect(machine_status).to eq "Fully stocked"
+    expect(machine_status).to eq 'Fully stocked'
   end
 end

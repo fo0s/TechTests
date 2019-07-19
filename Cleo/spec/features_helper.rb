@@ -41,7 +41,7 @@ def stock_vending_machine
 end
 
 def machine_status
-  "Fully stocked"
+  'Fully stocked'
 end
 
 def add_change_to_machine

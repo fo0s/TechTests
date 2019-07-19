@@ -32,14 +32,14 @@ class MaintanancePerson
 
   def update_warehouse_quantity(item, quantity)
     @warehouse_stock.map do |product|
-      if product.key?(item)
-        temp = (product[item][-1] - quantity) 
-        product[item].pop
-        product[item] << temp
-      end
+      next unless product.key?(item)
+
+      temp = (product[item][-1] - quantity)
+      product[item].pop
+      product[item] << temp
     end
 
-    new_warehouse = { "Products": @products, "Quantities": @warehouse_stock}
+    new_warehouse = { "Products": @products, "Quantities": @warehouse_stock }
     File.write(@warehouse_location, JSON.dump(new_warehouse))
   end
 
