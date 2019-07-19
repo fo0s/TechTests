@@ -34,7 +34,7 @@ class MaintanancePerson
     @warehouse_stock.map do |product|
       if product.key?(item)
         temp = (product[item][-1] - quantity) 
-        product[item].pop 
+        product[item].pop
         product[item] << temp
       end
     end

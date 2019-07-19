@@ -1,10 +1,9 @@
 def start_program
-  @vending_machine = VendingMachine.new
-  @vending_machine.data_source = 'data/products_test.json'
+  @vending_machine = VendingMachine.new('data/test/products_test.json')
 end
 
 def insert_amount(amount)
-  @vending_machine.temp_amount = +amount
+  @vending_machine.add_money(amount)
 end
 
 def select_item(item)
@@ -21,8 +20,12 @@ def hire_maintenance_person
   @alex = MaintanancePerson.new
 end
 
+def get_maintenance_person
+  @alex = MaintanancePerson.new
+end
+
 def get_warehouse_location
-  @warehouse = 'data/warehouse.json'
+  @warehouse = 'data/test/test_warehouse.json'
 end
 
 def provide_products
@@ -30,7 +33,7 @@ def provide_products
 end
 
 def which_vending_machine
-  @test_vending = 'data/products_test.json'
+  @test_vending = 'data/test/products_test.json'
 end
 
 def stock_vending_machine
@@ -39,4 +42,8 @@ end
 
 def machine_status
   "Fully stocked"
+end
+
+def add_change_to_machine
+  @alex.stock_money(@test_vending)
 end

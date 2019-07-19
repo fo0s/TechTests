@@ -1,61 +1,19 @@
 {
   "Products": [
     "Water",
-    "Kit Kat",
-    "Gummi Bears",
-    "Skittles",
-    "Toblerone",
-    "Smarties",
-    "M&Ms",
-    "Snickers"
+    "Kit Kat"
   ],
   "Quantities": [
     {
       "Water": [
         2,
-        70
+        9400
       ]
     },
     {
       "Kit Kat": [
-        1.25,
-        70
-      ]
-    },
-    {
-      "Gummi Bears": [
         1,
-        70
-      ]
-    },
-    {
-      "Skittles": [
-        1.5,
-        70
-      ]
-    },
-    {
-      "Toblerone": [
-        1.7,
-        70
-      ]
-    },
-    {
-      "Smarties": [
-        1.2,
-        70
-      ]
-    },
-    {
-      "M&Ms": [
-        1,
-        70
-      ]
-    },
-    {
-      "Snickers": [
-        1.5,
-        70
+        9400
       ]
     }
   ],

@@ -2,14 +2,17 @@ require 'json'
 
 # Start of the main vending machine class
 class VendingMachine
-  attr_accessor :data_source, :temp_amount
-  attr_reader :output, :need_topping_up
+  attr_reader :output, :need_topping_up, :data_source, :temp_amount
 
-  def initialize
-    @data_source = ''
+  def initialize(data_source)
+    @data_source = data_source
     @output = ''
     @temp_amount = 0
     @need_topping_up = []
+  end
+
+  def add_money(amount)
+    @temp_amount += amount
   end
 
   def check_item(item)
