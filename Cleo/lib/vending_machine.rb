@@ -40,7 +40,7 @@ class VendingMachine
       @output       += " and #{temp_amount - item_price} in change" if cond == 1
       @temp_amount  = 0
 
-    elsif cond == :no_stock
+    elsif     cond == :no_stock
       @output       = "Error: #{item} not stocked! Returning money"
       @temp_amount  = 0
     else
