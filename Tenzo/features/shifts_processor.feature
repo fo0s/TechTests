@@ -12,6 +12,6 @@ Feature: Process Shifts
     50 pounds
 
   Scenario: Open and read the csv file
-    Given a csv file work_shifts.csv
+    Given a csv file work_shifts
     When the file is opened
     Then expect the first line to read break_notes,end_time,pay_rate,start_time
