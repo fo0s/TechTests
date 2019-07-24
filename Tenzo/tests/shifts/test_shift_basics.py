@@ -37,17 +37,5 @@ class TestStartandEnd:
             user_time) == datetime(1900, 1, 1, 23, 00)
 
 
-class TestBreakStartandEnd:
-    shifts = Shifts()
-
-    def test_start_time(self):
-        assert self.shifts.separate_breaks(
-            user_time, 'start') == datetime(1900, 1, 1, 15, 00)
-
-    def test_end_time(self):
-        assert self.shifts.separate_breaks(
-            user2_time, 'end') == datetime(1900, 1, 1, 16, 10)
-
-
 user_time = ['15-18', '23:00', '10.0', '10:00']
 user2_time = ['4-4.10PM', '23:00', '20.0', '09:00']
