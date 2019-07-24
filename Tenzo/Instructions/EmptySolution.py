@@ -2,45 +2,23 @@
 Bart Biernat
 """
 
-def process_shifts(path_to_csv):
-    """
+from datetime import *
+from bin.process_shifts import Shifts
+from bin.process_labour import ShiftLabour
+from bin.process_file import ProcessFile
+from bin.process_transactions import Transactions
 
-    :param path_to_csv: The path to the work_shift.csv
-    :type string:
-    :return: A dictionary with time as key (string) with format %H:%M
-        (e.g. "18:00") and cost as value (Number)
-    For example, it should be something like :
-    {
-        "17:00": 50,
-        "22:00: 40,
-    }
-    In other words, for the hour beginning at 17:00, labour cost was
-    50 pounds
-    :rtype dict:
-    """
-    return
+
+def process_shifts(path_to_csv):  # Done
+    shift_file_data = open(path_to_csv).read()
+    shift = Shifts()
+    return shift.total_labout_cost(shift_file_data)
 
 
 def process_sales(path_to_csv):
-    """
-
-    :param path_to_csv: The path to the transactions.csv
-    :type string:
-    :return: A dictionary with time (string) with format %H:%M as key and
-    sales as value (string),
-    and corresponding value with format %H:%M (e.g. "18:00"),
-    and type float)
-    For example, it should be something like :
-    {
-        "17:00": 250,
-        "22:00": 0,
-    },
-    This means, for the hour beginning at 17:00, the sales were 250 dollars
-    and for the hour beginning at 22:00, the sales were 0.
-
-    :rtype dict:
-    """
-    return
+    file = open(path_to_csv).read()
+    sale = Transactions()
+    return sale.profits(file)
 
 
 def compute_percentage(shifts, sales):
@@ -98,4 +76,4 @@ if __name__ == '__main__':
     best_hour, worst_hour = main(path_to_shifts, path_to_sales)
 
 
-# Please write you name here:
+# Please write you name here: Bart Biernat
