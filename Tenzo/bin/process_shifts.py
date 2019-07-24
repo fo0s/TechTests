@@ -20,7 +20,7 @@ class Shifts:
         checking = 0
 
         for time in break_time:
-            if 'PM' not in break_time[checking] and (int(break_time[checking]) - 12) < 0:
+            if 'PM' not in break_time[checking] and (float(break_time[checking]) - 12) < 0:
                 break_time[checking] += 'PM'
             checking += 1
 
