@@ -4,6 +4,26 @@
 
 I was approached by Tenzo through [hackajob](https://app.hackajob.co/) with a technical test for their **Junior Full Stack Developer** role.
 
+## To use
+
+Clone this repo  
+> `git clone https://github.com/fo0s/TechTests.git`
+
+Navigate into the Tenzo directory  
+> `cd TechTests/Tenzo`
+
+**Optional but recommended**  
+Create a anaconda virtual development enviornment
+> `conda create -n tenzo_env python=3.6`  
+
+> `conda activate tenzo_env`
+
+Install dependencies  
+> `python3 -m pip install --user --requirement requirements.txt`  
+
+Run pytest to make sure everything is working
+> `pytest`
+
 ## Requirements
 
 The original requirements readme can be found [here](Instructions/readme.txt)
