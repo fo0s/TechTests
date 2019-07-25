@@ -17,12 +17,8 @@ class Shifts:
 
     def separate_breaks(self, input, wanted):
         break_time = input[0].split("-")
-        checking = 0
-
-        for time in break_time:
-            if 'PM' not in break_time[checking] and (float(break_time[checking]) - 12) < 0:
-                break_time[checking] += 'PM'
-            checking += 1
+        if 'PM' in break_time[1] and 'PM' not in break_time[0]:
+            break_time[0] += 'PM'
 
         if wanted == 'start':
             return self.clean_time(break_time[0])

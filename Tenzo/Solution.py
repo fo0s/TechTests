@@ -7,12 +7,14 @@ from bin.process_shifts import Shifts
 from bin.process_labour import ShiftLabour
 from bin.process_file import ProcessFile
 from bin.process_transactions import Transactions
+from bin.process_percentage import Percentage
 
 
 def process_shifts(path_to_csv):  # Done
     shift_file_data = open(path_to_csv).read()
-    shift = Shifts()
-    return shift.total_labout_cost(shift_file_data)
+    labour = ShiftLabour()
+
+    return labour.total_labour_cost(shift_file_data)
 
 
 def process_sales(path_to_csv):
@@ -22,38 +24,14 @@ def process_sales(path_to_csv):
 
 
 def compute_percentage(shifts, sales):
-    """
-
-    :param shifts:
-    :type shifts: dict
-    :param sales:
-    :type sales: dict
-    :return: A dictionary with time as key (string) with format %H:%M and
-    percentage of labour cost per sales as value (float),
-    If the sales are null, then return -cost instead of percentage
-    For example, it should be something like :
-    {
-        "17:00": 20,
-        "22:00": -40,
-    }
-    :rtype: dict
-    """
-    return
+    percent = Percentage()
+    return percent.calculate(shifts, sales)
 
 
 def best_and_worst_hour(percentages):
-    """
-
-    Args:
-    percentages: output of compute_percentage
-    Return: list of strings, the first element should be the best hour,
-    the second (and last) element should be the worst hour. Hour are
-    represented by string with format %H:%M
-    e.g. ["18:00", "20:00"]
-
-    """
-
-    return
+    best_hour = max(percentages, key=percentages.get)
+    worst_hour = min(percentages, key=percentages.get)
+    return [best_hour, worst_hour]
 
 
 def main(path_to_shifts, path_to_sales):
