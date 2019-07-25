@@ -12,8 +12,9 @@ from bin.process_percentage import Percentage
 
 def process_shifts(path_to_csv):  # Done
     shift_file_data = open(path_to_csv).read()
-    shift = Shifts()
-    return shift.return_shift_data(shift_file_data)
+    labour = ShiftLabour()
+
+    return labour.total_labour_cost(shift_file_data)
 
 
 def process_sales(path_to_csv):
