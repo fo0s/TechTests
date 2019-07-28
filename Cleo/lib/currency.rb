@@ -1,11 +1,14 @@
+# frozen_string_literal: true
+
+# Takes an amount and outputs values in change
 class ChangeConversion
   attr_reader :change
 
   def initialize
     @numerical_values = {
-                          '£' => [2, 1],
-                          'p' => [50, 20, 10, 5, 2, 1]
-                        }
+                  '£' => [2, 1],
+                  'p' => [50, 20, 10, 5, 2, 1]
+                  }
     @values           = ['£', 'p']
     @change           = []
   end
@@ -29,6 +32,7 @@ class ChangeConversion
         checked -= (denominator * remainder)
       end
     end
+
 
     @change
   end

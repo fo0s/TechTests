@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Main vending machine tests
 
 describe 'Vending machine' do

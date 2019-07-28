@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def start_program
   @vending_machine = VendingMachine.new('data/test/products_test.json')
 end

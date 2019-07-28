@@ -1,0 +1,16 @@
+You are a good looking** software engineer
+who is tasked at looking at new applicant's
+tech test code when it starts... 
+the pre lunch stomach grumbles.
+
+If only you had something to snack on.
+
+"Ooooh!"" you think, "They've installed a new
+vending machine in the office."
+
+**Might not be accurate
+
+What would you like to do?
+
+1 <-- Let's go get some snacks mah belly!
+2 <-- Meh! Ignore the hunger and keep working.

@@ -7,7 +7,6 @@ gem 'json'
 
 group :test do
   gem 'capybara'
-  gem 'capybara/rspec'
   gem 'rspec'
   gem 'rspec-core'
   gem 'rubocop'

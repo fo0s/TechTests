@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'Change converter: ' do
   before(:each) { @cha_ching = ChangeConversion.new }
 

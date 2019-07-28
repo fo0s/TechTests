@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # The machine should take an initial load of products
 # and change. The change will be of denominations
 # 1p, 2p, 5p, 10p, 20p, 50p, £1, £2

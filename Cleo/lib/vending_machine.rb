@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 
 # Start of the main vending machine class
@@ -36,11 +38,11 @@ class VendingMachine
   def create_output(cond, item_price, item)
     if (cond == 1) || (cond == 0)
 
-      @output       = "You receive a #{item}"
-      @output       += " and #{temp_amount - item_price} in change" if cond == 1
+      @output = "You receive a #{item}"
+      @output += " and #{temp_amount - item_price} in change" if cond == 1
       @temp_amount  = 0
 
-    elsif     cond == :no_stock
+    elsif cond == :no_stock
       @output       = "Error: #{item} not stocked! Returning money"
       @temp_amount  = 0
     else

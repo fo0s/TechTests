@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'Maintanance person' do
   before(:all) do
     @warehouse_location = 'data/test/test_warehouse.json'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Start of maintanance person class
 class MaintanancePerson
   attr_reader :products
@@ -18,8 +20,6 @@ class MaintanancePerson
 
     File.write(machine, JSON.dump(vending_stock))
   end
-
-  :private
 
   def price_for(item)
     price = 0

@@ -1,0 +1,13 @@
+"Let's go get some snacks mah belly!" you exclaim,
+(quietly in your head of course. No-one likes a weirdo.)
+
+You proceed to lock your computer (safety first) and
+head on over to the vending machine.
+
+You dig around in your pockets and find 3 £2 coins.
+
+What would you like to do?
+
+1 <-- Deposit coins into vending machine
+2 <-- Check out what's on offer
+3 <-- Decide against it. Let's go get a salad instead
